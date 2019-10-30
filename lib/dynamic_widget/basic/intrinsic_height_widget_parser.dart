@@ -9,10 +9,10 @@ class IntrinsicHeightWidgetParser extends WidgetParser {
 
   @override
   Widget parse(Map<String, dynamic> map, BuildContext buildContext,
-      ClickListener listener) {
+      WidgetParserCompanion companion) {
     return IntrinsicHeight(
       child: DynamicWidgetBuilder.buildFromMap(
-          map["child"], buildContext, listener),
+          map["child"], buildContext, companion),
     );
   }
 }
